@@ -9,7 +9,7 @@ def openFile(filename):
     all_data = []
     points = []
     for line in open(filename).readlines():
-		all_data.append(line.split())
+        all_data.append(line.split())
 
     # convert entries to floats
     all_data = [[j for j in i] for i in all_data]
@@ -37,7 +37,7 @@ def main():
 
     for i,c in enumerate(clusters):
         for p in c.points:
-            print " Cluster: ", i, "\t Point :", p
+            print (" Cluster: ", i, "\t Point :", p)
 
 
 
@@ -123,7 +123,7 @@ def kmeans(points, k, cutoff):
 
         # if shift is below cutoff, finished
         if biggest_shift < cutoff:
-            print "Converged after %s iterations" % loops
+            print ("Converged after %s iterations" % loops)
             break
     return clusters
 
